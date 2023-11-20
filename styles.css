@@ -28,8 +28,8 @@ h1 {
 .logo img {
     width: 125px;
     height: 75px;
-    text-align: left;
-}
+    padding-top: 5px;
+} 
 
 .homeColor {
     color: rgb(0, 126, 122);
@@ -38,10 +38,10 @@ h1 {
 }
 
 .search {
-    background-color: white;
-    color: black;
+    background-color: rgb(25, 144, 140);
+    color: white;
     margin: auto 0;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 20px;
     padding: 10px;
     font-size: .9rem;
