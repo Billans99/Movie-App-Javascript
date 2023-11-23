@@ -30,10 +30,20 @@ function showMovies(data) {
 
                 <div class="overview">
                     <h3 class="homeColor">Overview</h3>
-                    lorem ispum blah blah blah lorem ispum blah blah blah lorem ispum blah blah blah lorem ispum blah blah blah lorem ispum blah blah blah
+                    ${overview}
                 </div>
         
         
         `
     })
+}
+
+function getColor(vote) {
+    if (vote >= 8) {
+        return 'green'
+    }   else if (vote >= 5) {
+        return 'orange'
+    } else {
+        return 'red'
+    }
 }
