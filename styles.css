@@ -103,6 +103,10 @@ main {
     color: red;
 }
 
+.movieInfo span.orange {
+    color: orange;
+}
+
 .overview {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
