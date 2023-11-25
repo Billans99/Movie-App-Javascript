@@ -6,6 +6,8 @@ const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500'
 
 const main = document.getElementById('main');
+const form = document.getElementById('form');
+const search = document.getElementById('search');
 
 getMovies(API_URL);
 
@@ -19,7 +21,7 @@ function getMovies(url) {
 // function to show movies from API data onto the page
 function showMovies(data) {
     main.innerHTML = '';
-
+ 
     data.forEach(movie => {
         const {title, poster_path, vote_average, overview} = movie;
         const movieEl = document.createElement('div');
@@ -27,10 +29,9 @@ function showMovies(data) {
         movieEl.innerHTML = `
             <img src="${IMG_URL+poster_path}" alt="${title}">
             
-                <div class="m${getColor(vote_average)}">
+                <div class="movieInfo">
                     <h3>${title}</h3>
-
-                    <span class="green">${vote_average}</span>
+                    <span class="${getColor(vote_average)}">${vote_average}</span>
                 </div>
 
                 <div class="overview">
@@ -40,15 +41,22 @@ function showMovies(data) {
         
         
         `
+// appended movieEl to main in HTML file
+        main.appendChild(movieEl);
     })
 }
 
 function getColor(vote) {
     if (vote >= 8) {
         return 'green'
-    }   else if (vote >= 5) {
+    }  else if (vote >= 5) {
         return 'orange'
     } else {
         return 'red'
     }
 }
+
+// funct
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+})
