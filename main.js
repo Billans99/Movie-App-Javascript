@@ -58,7 +58,7 @@ function getColor(vote) {
     }
 }
 
-// function for 
+// function for searching movie through input
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
